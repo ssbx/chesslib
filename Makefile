@@ -1,10 +1,16 @@
-.PHONY: build install clean
+.PHONY: build install clean uninstall update
 
 build:
 	dune build
 
-install: build
+install:
 	opam install ./chesslib.opam
+
+uninstall:
+	opam remove chesslib
+
+update:
+	if [ -n $(GAMEDEVDIR) ]; then cp -r $(GAMEDEVDIR)/libs/chesslib/* . ; fi
 
 clean:
 	dune clean
