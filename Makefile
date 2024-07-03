@@ -9,8 +9,5 @@ install:
 uninstall:
 	opam remove chesslib
 
-update:
-	if [ -n $(GAMEDEVDIR) ]; then cp -vr $(GAMEDEVDIR)/libs/chesslib/* . ; fi
-
 clean:
 	dune clean
