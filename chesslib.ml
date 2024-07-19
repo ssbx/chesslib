@@ -1,6 +1,4 @@
-
 include Types
-
 module Utils = Utils
 module Board = Board
 module Fen = Fen
